@@ -1,0 +1,26 @@
+openapi: 3.0.3
+info:
+  title: health-route
+  description: The health-route
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /v1:
+    get:
+      tags:
+        - default
+      summary: get a list of available health metrics
+      operationId: getMetrics
+      responses:
+        200:
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+#                items:
+#                  $ref: '#/components/schemas/Metrics'
+  
+components:
+  schemas:
